@@ -4,7 +4,6 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: white;
 }
 
 .a-enter-vr-button {
@@ -13,4 +12,35 @@ html {
   right: 5em;
   z-index: 99999;
 
+}
+
+#chat-client {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999999
+}
+
+#chat-client .message-panel{
+    max-height: 100px;
+    min-height: 20px;
+    overflow: auto;
+}
+
+
+#chat-client input {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    width: 96%;
+    color: inherit;
+}
+
+#chat-client ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+#chat-client ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
