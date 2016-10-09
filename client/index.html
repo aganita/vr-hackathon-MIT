@@ -2,23 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>VR Experince</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-    </style>
-    <script src="js/aframe/aframe.js"></script>
+    <title>hashtag360</title>
 </head>
 <body ng-app="hackathonApp">
   <div ng-controller="MainController"></div>
   <div ng-view></div>
   <base href="/">
+  <script src="js/aframe/aframe.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
   <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
@@ -34,11 +24,12 @@
     };
     firebase.initializeApp(config);
   </script>
-  <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>  <script src="js/main.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>  
   <script src="js/libs/angular-socket-io/socket.min.js"></script>
-  <!-- <script src="js/libs/angular-materil/angular-material.js"></script> -->
   <script src="js/app/app.js"></script>
   <script src="js/app/controllers/homeController.js"></script>
   <script src="js/app/services/messageService.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/socket.js"></script>
 </body>
 </html>

@@ -19,5 +19,10 @@ footer {
   margin-top: 20px;
 }
 
-.fullscreen {
+.a-enter-vr-button {
+  position: fixed;
+  bottom: 5em;
+  right: 5em;
+  z-index: 99999;
+
 }
