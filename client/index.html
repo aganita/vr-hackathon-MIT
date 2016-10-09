@@ -2,28 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>hashtag360 WebVR</title>
+    <title>hashtag360</title>
 </head>
-<body>
-  <a-scene>
-    <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-    <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-    <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-    <a-sphere color="#000000" radius="2" position="0 15 20"></a-sphere>
-    <a-sky src="assets/pan1.jpg" rotation="0 -130 0"></a-sky>  
-  </a-scene>
-  
-  <div>
-    <!--<ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>-->
-  </div>
-  <script src="js/aframe/aframe.js"></script>  
-  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<body ng-app="hackathonApp">
+  <div ng-controller="MainController"></div>
+  <div ng-view></div>
+  <base href="/">
+  <script src="js/aframe/aframe.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
   <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-  <script src="js/socket.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDO1w_HOOXt2OnduDnfjcagqLCwUC9UG8s",
+      authDomain: "mithack-24852.firebaseapp.com",
+      databaseURL: "https://mithack-24852.firebaseio.com",
+      storageBucket: "mithack-24852.appspot.com",
+      messagingSenderId: "350041386849"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>  
+  <script src="js/libs/angular-socket-io/socket.min.js"></script>
+  <script src="js/app/app.js"></script>
+  <script src="js/app/controllers/homeController.js"></script>
+  <script src="js/app/services/messageService.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/socket.js"></script>
 </body>
 </html>
