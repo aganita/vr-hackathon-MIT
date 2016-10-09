@@ -1,0 +1,14 @@
+<div class="chat">
+  <h2>Scene: {{chatId}}</h2>
+  <hr>
+  <div ng-repeat="message in messages" class="clearfix message">
+    <div class="chatname">{{ (message.chatname) ? message.chatname : '?' }}</div>
+    <div class="chatmessage">{{ message.text }}</div>
+  </div>
+  <div class="input-panel">
+    <form ng-submit="addMessage()" id="chat-form">
+        <input id="m" ng-model="newMessageText" onfocus='clear(this);' placeholder="Enter Chat Message"/>
+        <button type="submit">Add a message</button>
+    </form>
+  </div>
+</div>

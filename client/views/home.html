@@ -1,25 +1,11 @@
 <div>
-  <div id="chat-client">
-    <div ng-repeat="message in messages" class="message-panel">
-      {{ message.text }}
-    </div>
-    <div class="input-panel">
-      <form ng-submit="addMessage()" id="chat-form">
-          <input id="m" ng-model="newMessageText" onfocus='clear(this);'/>
-          <button type="submit">Add a message</button>
-      </form>
-    </div>
+  <div class="nav">
+    Go To scene
+    <a href="/home/odaiba">Odaiba, Japan</a>
+    <a href="/home/mountains">Mountains</a>
+    <a href="/home/night">Night</a>
   </div>
-  <a-scene>
-    <a-assets>
-      <img id="enemy-sprite" crossorigin="" src="../assets/mustache1.jpg">
-    </a-assets>
-
-    <a-image look-at="#player" src="../assets/mustache1.jpg" transparent="true" position="0 1.8 -4"></a-image>
-    <a-camera id="player" position="0 1.8 0"></a-camera>
-    <a-sphere click-drag position="0 1.25 -5" radius="1.25" src="../assets/musbtache1.jpg"></a-sphere>
-      <a-camera look-controls-enabled="false"></a-camera>
-    <a-sky src="../assets/pan1.jpg"></a-sky>
-  </a-scene> 
+  <chat chat-id="sceneId"></chat>
+  <scene scene-id="sceneId"></scene>
 </div>
 

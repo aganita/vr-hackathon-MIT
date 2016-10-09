@@ -13,6 +13,10 @@ angular.module('hackathonApp', ['ngRoute', 'firebase'])
             templateUrl: '/views/home.html',
             controller: 'HomeController',
         })
+        .when('/home/:sceneId', {
+            templateUrl: '/views/home.html',
+            controller: 'HomeController',
+        })        
         .otherwise({
             redirectTo: '/home'
         });

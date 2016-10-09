@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title>hashtag360</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <style>
+      @import 'https://fonts.googleapis.com/css?family=Maven+Pro';
+    </style>
 </head>
 <body ng-app="hackathonApp">
   <div ng-controller="MainController"></div>
   <div ng-view></div>
-
 
   <base href="/">
   <script src="js/aframe/aframe.js"></script>
@@ -22,13 +23,17 @@
   <script src="js/app/app.js"></script>
   <script src="js/app/controllers/homeController.js"></script>
   <script src="js/app/services/messageService.js"></script>
+  <script src="js/app/directives/scene.js"></script>
+  <script src="js/app/directives/chat.js"></script>
   <script src="js/main.js"></script>
   <script src="js/socket.js"></script>
   <script src="js/chat.js"></script>
   
   <script src="https://rawgit.com/IdeaSpaceVR/aframe-ui-modal-component/master/dist/aframe-ui-modal-component.min.js"></script>
   <script src="https://unpkg.com/aframe-click-drag-component"></script> 
+  <script src="https://rawgit.com/ngokevin/aframe-firebase-component/master/dist/aframe-firebase-component.min.js"></script>
   <script> registerAframeClickDragComponent(window.AFRAME); </script>
 </body>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </html>
 

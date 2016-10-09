@@ -4,6 +4,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Maven Pro', sans-serif;
 }
 
 .a-enter-vr-button {
@@ -43,4 +44,92 @@ html {
 #chat-client ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.chat {
+    position: fixed;
+    z-index: 9999;
+    background: rgba(255, 218, 0, 0.7);
+    padding: 1rem;
+    margin: 1rem;
+    margin-top: 3rem;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.5rem;
+    z-index: 9999;
+    background: #000;
+    color: #fff;
+}
+
+.nav a {
+    color: rgba(255, 218, 0, 1);
+    margin-left: 1rem;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+.clearfix {
+    display: block;
+}
+
+button {
+    line-height: 2.2rem;
+    background: #000;
+    border: 0;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    font-weight: 500;
+}
+
+input {
+    line-height: 2.2rem;
+    padding: 0 0.5rem;
+    border: 0;
+    display: inline-block;
+    float: left;  
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #000;
+    height: 1px;  
+}
+
+h2 {
+    margin: 0;
+}
+
+.chatmessage {
+    padding: 0.5rem;
+    padding-left: 3em;
+    margin-bottom: 0.5rem;
+}
+
+.chatname {
+  background: #000;
+  width: 2.2rem;
+  line-height: 2.2rem;
+  display: inline-block;
+  float: left;
+  border-radius: 1.1rem;
+  text-align: center;
+  color: #fff;
 }
