@@ -2,57 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>VR Experince</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-    </style>
+    <title>hashtag360 WebVR</title>
 </head>
 <body>
-  <script src="js/aframe/aframe.js"></script>
-  <section>
-    <div>
-      <a-scene>
-        <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
-        <a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9"></a-box>
-        <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-        <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-
-        <a-sky src="assets/pan1.jpg" rotation="0 -130 0"></a-sky>
-        <a-entity position="0 0 3.8">
-          <a-camera></a-camera>
-        </a-entity>
-      </a-scene>
-    <div>
-    <div>
-      <ul id="messages"></ul>
-      <form action="">
-        <input id="m" autocomplete="off" /><button>Send</button>
-      </form>
-    </div>
-  </section>
-  <footer>
-    Build by team hashtag360
-  </footer>
+  <a-scene>
+    <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+    <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+    <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+    <a-sky src="assets/pan1.jpg" rotation="0 -130 0"></a-sky>  
+  </a-scene>
+  <div>
+    <!--<ul id="messages"></ul>
+    <form action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>-->
+  </div>
+  <script src="js/aframe/aframe.js"></script>  
   <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
   <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-  <script>
-    var socket = io();
-    $('form').submit(function(){
-      socket.emit('chat message', $('#m').val());
-      $('#m').val('');
-      return false;
-    });
-    socket.on('chat message', function(msg){
-      $('#messages').append($('<li>').text(msg));
-    });
-  </script>
+  <script src="js/socket.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
