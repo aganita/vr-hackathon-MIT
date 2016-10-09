@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>hashtag360</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+      <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+  <script src="https://rawgit.com/ngokevin/aframe-firebase-component/master/dist/aframe-firebase-component.min.js"></script>
 </head>
 <body ng-app="hackathonApp">
   <div ng-controller="MainController"></div>
@@ -15,6 +17,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
   <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
   <script src="js/firebaseconfig.js"></script>
   <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>  
@@ -29,6 +32,13 @@
   <script src="https://rawgit.com/IdeaSpaceVR/aframe-ui-modal-component/master/dist/aframe-ui-modal-component.min.js"></script>
   <script src="https://unpkg.com/aframe-click-drag-component"></script> 
   <script> registerAframeClickDragComponent(window.AFRAME); </script>
+  <script>
+      var socket = io();
+      socket.emit('test', "it works!!!")
+      socket.on('test', function(data){
+        console.log("my data", data);
+      });
+  </script>
 </body>
 </html>
 
