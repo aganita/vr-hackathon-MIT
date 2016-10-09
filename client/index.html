@@ -14,9 +14,12 @@
       #messages li:nth-child(odd) { background: #eee; }
     </style>
 </head>
-<body>
+<body ng-app="hackathonApp">
+  <div ng-controller="MainController"></div>
+  <div ng-view></div>
+  <base href="/">
   <script src="js/aframe/aframe.js"></script>
-    <div>
+<!--     <div>
       <a-scene>
         <a-sky src="assets/puydesancy.jpg" rotation="0 -130 0"></a-sky>
       </a-scene>
@@ -27,7 +30,9 @@
     <form action="">
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
-  </footer>
+  </footer> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
   <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
   <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
   <script>
@@ -42,5 +47,9 @@
     });
   </script>
   <script src="js/main.js"></script>
+  <script src="js/libs/angular-socket-io/socket.min.js"></script>
+  <script src="js/libs/angular-material/angular-material.js"></script>
+  <script src="js/app/app.js"></script>
+  <script src="js/app/controllers/homeController.js"></script>
 </body>
 </html>

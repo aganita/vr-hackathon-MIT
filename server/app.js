@@ -16,6 +16,7 @@ var io = require('socket.io')(server);
 
 require('./config/express')(app);
 
+app.use(express.static(path.join(__dirname, 'client')));
 
 io.on('connection', function(socket){
   console.log('a user connected');
@@ -28,6 +29,11 @@ io.on('connection', function(socket){
     console.log('user disconnected');
   });
   
+});
+
+
+app.get('*', function(req, res) {
+    res.sendfile('./client/index.html'); // load the single view file (angular will handle the page changes on the front-end)
 });
 
 // Start server
