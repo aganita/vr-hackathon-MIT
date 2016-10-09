@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -20,14 +20,14 @@
     <form action="">
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
-  <!--<header><p>Solve it with Friends!</p></header>
+  <header><p>Solve it with Friends!</p></header>
   <section>
     <div>
       <button onclick='getClanInfo("90LJ2QUP")'>Get Info!</button>
     </div>
     <div class='result'>
     </div>    
-  </section>-->
+  </section>
   <footer>Made with love at VR Hackathon</footer>
   <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
@@ -43,5 +43,59 @@
       });
     </script>
         <script src="js/main.js"></script>
+        <script src="https://aframe.io/releases/{{ version }}/aframe.min.js"></script>
 </body>
+</html> -->
+
+
+
+   <!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Panorama</title>
+    <meta name="description" content="Panorama — A-Frame">
+
+  </head>
+  <body style="background-image: url(background.jpg);">
+   
+        <script src="js/main.js"></script>
+         <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+
+        <script src="js/three.min.js"></script>
+  </body>
+</html>-->
+
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Panorama</title>
+    <meta name="description" content="Panorama — A-Frame">
+  </head>
+  <body>
+  <a-scene>
+  <a-assets>
+    <img id="enemy-sprite" crossorigin="" src="mustache1.jpg">
+  </a-assets>
+
+  <a-image look-at="#player" src="mustache1.jpg" transparent="true" position="0 1.8 -4"></a-image>
+
+ <a-camera id="player" position="0 1.8 0"></a-camera>
+ 
+
+<a-sphere click-drag position="0 1.25 -5" radius="1.25" src="mustache1.jpg"></a-sphere>
+  <!--   <a-camera look-controls-enabled="false"></a-camera> -->
+  <a-sky src="street.jpg"></a-sky>
+</a-scene> 
+
+
+    </script>
+        <script src="js/main.js"></script>
+         <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+        <script src="https://rawgit.com/IdeaSpaceVR/aframe-ui-modal-component/master/dist/aframe-ui-modal-component.min.js"></script>
+          <script src="https://unpkg.com/aframe-click-drag-component"></script> 
+          <script> registerAframeClickDragComponent(window.AFRAME); </script>
+  </body>
 </html>
+
