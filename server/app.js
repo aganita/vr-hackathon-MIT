@@ -19,11 +19,16 @@ require('./config/express')(app);
 
 // set up sockets
 io.on('connection', function(socket){
-  console.log('a user connected');
+  console.log('a user connected yeS!');
   socket.on('chat message', function(msg){
     console.log('got the message', msg)
     io.emit('chat message', msg);
   });
+
+  socket.on('change cube', function(data){
+    console.log('here we go !', data);
+    socket.broadcast.emit('change cube', data)
+  })
 
   socket.on('disconnect', function(){
     console.log('user disconnected');
