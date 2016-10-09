@@ -7,23 +7,15 @@
 <body ng-app="hackathonApp">
   <div ng-controller="MainController"></div>
   <div ng-view></div>
+
+
   <base href="/">
   <script src="js/aframe/aframe.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
   <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyDO1w_HOOXt2OnduDnfjcagqLCwUC9UG8s",
-      authDomain: "mithack-24852.firebaseapp.com",
-      databaseURL: "https://mithack-24852.firebaseio.com",
-      storageBucket: "mithack-24852.appspot.com",
-      messagingSenderId: "350041386849"
-    };
-    firebase.initializeApp(config);
-  </script>
+  <script src="js/firebaseconfig.js"></script>
   <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>  
   <script src="js/libs/angular-socket-io/socket.min.js"></script>
   <script src="js/app/app.js"></script>
