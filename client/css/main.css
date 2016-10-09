@@ -18,3 +18,11 @@ footer {
   color: white;
   margin-top: 20px;
 }
+
+.a-enter-vr-button {
+  position: fixed;
+  bottom: 5em;
+  right: 5em;
+  z-index: 99999;
+
+}

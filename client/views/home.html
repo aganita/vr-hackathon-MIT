@@ -1,0 +1,21 @@
+<div>
+    <h1>Hello Home</h1> 
+    <div ng-repeat="message in messages">
+        {{ message.text }}
+    </div>
+    <form ng-submit="addMessage()">
+        <input ng-model="newMessageText" />
+        <button type="submit">Add a message</button>
+    </form>
+    <a-scene>
+      <a-assets>
+        <img id="enemy-sprite" crossorigin="" src="mustache1.jpg">
+      </a-assets>
+
+      <a-image look-at="#player" src="mustache1.jpg" transparent="true" position="0 1.8 -4"></a-image>
+      <a-camera id="player" position="0 1.8 0"></a-camera>
+      <a-sphere click-drag position="0 1.25 -5" radius="1.25" src="musbtache1.jpg"></a-sphere>
+        <a-camera look-controls-enabled="false"></a-camera>
+      <a-sky src="street.jpg"></a-sky>
+    </a-scene> 
+</div>
