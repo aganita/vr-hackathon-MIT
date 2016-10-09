@@ -41,18 +41,18 @@
       });
 
       $('body').on("click", 'scene', () => {
-      console.log('yyyyyyyyess!');
-       document.getElementById("cube").setAttribute('material', 'color', 'red');
-       var dataObj = {
-         id: 'cube',
-         color: 'red'
-       }
-        socket.emit('change cube', dataObj);
-    });
-//     document.querySelector('#cube').addEventListener('click', function () {
-//       this.setAttribute('material', 'color', 'red');
-//       console.log('I was clicked!');
-// });
+        console.log('yyyyyyyyess!');
+         document.getElementById("cube").setAttribute('material', 'color', 'red');
+         var dataObj = {
+           id: 'cube',
+           color: 'red'
+         }
+          socket.emit('change cube', dataObj);
+      });
+    // document.querySelector('#cube').addEventListener('click', function () {
+    //   this.setAttribute('material', 'color', 'red');
+    //   console.log('I was clicked!');
+    // });
   </script>
 </body>
   <link rel="stylesheet" type="text/css" href="css/main.css">
