@@ -1,9 +1,13 @@
 var socket = io();
-$('form').submit(function(){
-  socket.emit('chat message', $('#m').val());
-  $('#m').val('');
-  return false;
+
+socket.on('change cube', function(colorValue){
+  console.log('changing the cube color!', colorValue)
+  document.getElementById("cube").setAttribute('material', 'color', colorValue);
 });
-socket.on('chat message', function(msg){
-  $('#messages').append($('<li>').text(msg));
+
+$('body').on("click", 'scene', () => {
+  console.log('yyyyyyyyess!');
+  document.getElementById("cube").setAttribute('material', 'color', 'red');
+  let colorValueSend = 'red'
+  socket.emit('change cube', colorValueSend);
 });
