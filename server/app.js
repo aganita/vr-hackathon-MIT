@@ -25,9 +25,9 @@ io.on('connection', function(socket){
     io.emit('chat message', msg);
   });
 
-  socket.on('test', function(data){
+  socket.on('change cube', function(data){
     console.log('here we go !', data);
-    socket.emit('test', socket.id)
+    socket.broadcast.emit('change cube', data)
   })
 
   socket.on('disconnect', function(){

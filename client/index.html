@@ -34,10 +34,24 @@
   <script> registerAframeClickDragComponent(window.AFRAME); </script>
   <script>
       var socket = io();
-      socket.emit('test', "it works!!!")
-      socket.on('test', function(data){
-        console.log("my data", data);
+      socket.on('change cube', function(data){
+        console.log('changing the cube color!')
+        document.getElementById("cube").setAttribute('material', 'color', 'red');
       });
+
+      window.addEventListener("click", () => {
+      console.log('yyyyyyyyess!');
+       document.getElementById("cube").setAttribute('material', 'color', 'red');
+       var dataObj = {
+         id: 'cube',
+         color: 'red'
+       }
+        socket.emit('change cube', dataObj);
+    });
+    // document.querySelector('#cube').addEventListener('click', function () {
+    //   this.setAttribute('material', 'color', 'red');
+    //   console.log('I was clicked!');
+// });
   </script>
 </body>
 </html>
