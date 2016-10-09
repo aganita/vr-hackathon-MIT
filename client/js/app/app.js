@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hackathonApp', ['ngRoute'])
+angular.module('hackathonApp', ['ngRoute', 'firebase'])
      .controller('MainController', function($scope, $route, $routeParams, $location) {
         $scope.$route = $route;
         $scope.$location = $location;

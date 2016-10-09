@@ -1,1 +1,10 @@
-<h1>Hello Home</h1> 
+<div>
+    <h1>Hello Home</h1> 
+    <div ng-repeat="message in messages">
+        {{ message.text }}
+    </div>
+    <form ng-submit="addMessage()">
+        <input ng-model="newMessageText" />
+        <button type="submit">Add a message</button>
+    </form>
+</div>

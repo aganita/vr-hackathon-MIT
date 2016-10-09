@@ -46,7 +46,19 @@
       $('#messages').append($('<li>').text(msg));
     });
   </script>
-  <script src="js/main.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDO1w_HOOXt2OnduDnfjcagqLCwUC9UG8s",
+      authDomain: "mithack-24852.firebaseapp.com",
+      databaseURL: "https://mithack-24852.firebaseio.com",
+      storageBucket: "mithack-24852.appspot.com",
+      messagingSenderId: "350041386849"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>  <script src="js/main.js"></script>
   <script src="js/libs/angular-socket-io/socket.min.js"></script>
   <script src="js/libs/angular-material/angular-material.js"></script>
   <script src="js/app/app.js"></script>
