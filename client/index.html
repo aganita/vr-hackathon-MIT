@@ -13,39 +13,15 @@
       #messages li { padding: 5px 10px; }
       #messages li:nth-child(odd) { background: #eee; }
     </style>
+    <script src="js/aframe/aframe.js"></script>
 </head>
 <body ng-app="hackathonApp">
   <div ng-controller="MainController"></div>
   <div ng-view></div>
   <base href="/">
-  <script src="js/aframe/aframe.js"></script>
-<!--     <div>
-      <a-scene>
-        <a-sky src="assets/puydesancy.jpg" rotation="0 -130 0"></a-sky>
-      </a-scene>
-    <div>
-
-  <footer>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
-  </footer> -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
-  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
   <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-  <script>
-    var socket = io();
-    $('form').submit(function(){
-      socket.emit('chat message', $('#m').val());
-      $('#m').val('');
-      return false;
-    });
-    socket.on('chat message', function(msg){
-      $('#messages').append($('<li>').text(msg));
-    });
-  </script>
   <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -60,8 +36,9 @@
   </script>
   <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>  <script src="js/main.js"></script>
   <script src="js/libs/angular-socket-io/socket.min.js"></script>
-  <script src="js/libs/angular-material/angular-material.js"></script>
+  <!-- <script src="js/libs/angular-materil/angular-material.js"></script> -->
   <script src="js/app/app.js"></script>
   <script src="js/app/controllers/homeController.js"></script>
+  <script src="js/app/services/messageService.js"></script>
 </body>
 </html>

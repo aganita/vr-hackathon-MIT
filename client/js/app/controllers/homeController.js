@@ -14,6 +14,8 @@ function HomeController(
     $firebaseAuth
 ) {
 
+    console.log('chat');
+
     var auth = $firebaseAuth();
 
     // login with Facebook
@@ -25,10 +27,11 @@ function HomeController(
     });
 
     var ref = firebase.database().ref().child("messages");
+
     $scope.messages = $firebaseArray(ref);
     $scope.addMessage = function(){
         $scope.messages.$add({
             text: $scope.newMessageText
         });
-    }
+    };
 }
