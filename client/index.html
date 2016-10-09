@@ -32,7 +32,6 @@
   
   <script src="https://rawgit.com/IdeaSpaceVR/aframe-ui-modal-component/master/dist/aframe-ui-modal-component.min.js"></script>
   <script src="https://unpkg.com/aframe-click-drag-component"></script> 
-  <script src="https://rawgit.com/ngokevin/aframe-firebase-component/master/dist/aframe-firebase-component.min.js"></script>
   <script> registerAframeClickDragComponent(window.AFRAME); </script>
   <script>
       var socket = io();
@@ -41,7 +40,7 @@
         document.getElementById("cube").setAttribute('material', 'color', 'red');
       });
 
-      window.addEventListener("click", () => {
+      $('body').on("click", 'scene', () => {
       console.log('yyyyyyyyess!');
        document.getElementById("cube").setAttribute('material', 'color', 'red');
        var dataObj = {
@@ -50,9 +49,9 @@
        }
         socket.emit('change cube', dataObj);
     });
-    // document.querySelector('#cube').addEventListener('click', function () {
-    //   this.setAttribute('material', 'color', 'red');
-    //   console.log('I was clicked!');
+//     document.querySelector('#cube').addEventListener('click', function () {
+//       this.setAttribute('material', 'color', 'red');
+//       console.log('I was clicked!');
 // });
   </script>
 </body>
