@@ -17,7 +17,7 @@ http://mithack.herokuapp.com/
 ### Get the source code
 Clone the repo and install node components in package.json
 ```shell
-$ git clone https://github.com/aganita/vr-hackathon-MIT.git PictureHangout
-$ cd PictureHangout
+$ git clone https://github.com/aganita/vr-hackathon-MIT.git hashtag360
+$ cd hashtag360
 $ npm install
 ```
