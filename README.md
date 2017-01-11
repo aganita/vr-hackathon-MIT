@@ -1,7 +1,7 @@
 # Hashtag360
 
-## Requirements
-- [Node](https://nodejs.org) `4.x` or newer
+## Deployed Project
+http://mithack.herokuapp.com/
 
 ## Stack
 - [Express]() `4.14.0` ExpressJS
@@ -10,10 +10,10 @@
 - [Firebase]() 
 - [Soket.io]() 
 
-## Deployed Project
-http://mithack.herokuapp.com/
-
 ## For Developers
+### Requirements
+- [Node](https://nodejs.org) `4.x` or newer
+
 ### Get the source code
 Clone the repo and install node components in package.json
 ```shell
